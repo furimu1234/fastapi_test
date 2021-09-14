@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+<!--layout.html をインポート-->
+
+<!--ここから random.html 独自の実装-->
+{% block content %}
+
+<div>
+    <!--apiで配列から取り出した物をhtmlでブラウザに表示する-->
+    <h1>今回選ばれたのは　{{ random_data }} コースでした！</h1>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+<!--layout.html をインポート-->
+
+<!--ここから index.html 独自の実装-->
+{% block content %}
+<div class="row">
+    <div class="col-md-10">
+
+        <!--api側でこのファイルで test1, test2をそれぞれ使えるようにしてるので、それを表示する-->
+        <h1>Test data1: {{ test1 }}</h1>
+        <h2>Test data1: {{ test2 }}</h2>
+    </div>
+<hr>
+ 
+{% endblock %}
+<!--ここまで-->
