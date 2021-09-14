@@ -27,6 +27,8 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 async def test(req: Request):
     
     #test1, test2の値をそれぞれ、 index.htmlで使えるようにする。
+    #dict(辞書)は {key: value, key2: value2...} という構成で成り立っている。
+    #htmlで {{ key }} と指定する事により、それに対応したvalueがwebで表示される
     data = {"request": req,"test1": "test1", "test2": "test2"}
     
     return template.TemplateResponse("index.html", data)
